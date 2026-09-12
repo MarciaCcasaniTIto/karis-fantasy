@@ -24,3 +24,64 @@
   padding: 10px;
   z-index: 9999;         /* siempre encima */
 }
+/* Barra de promoción */
+.promo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #ff66cc, #9933ff); /* rosado a morado */
+  color: #fff; /* letras blancas para contraste */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 40px;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Header fijo */
+.main-header {
+  position: sticky; /* se mantiene visible al hacer scroll */
+  top: 50px;        /* debajo de la barra de promo */
+  background: #fff; /* fondo blanco para contraste */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #28a745; /* verde al pasar el cursor */
+}
