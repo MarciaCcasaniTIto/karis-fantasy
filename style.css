@@ -11,3 +11,16 @@
   object-fit: contain; /* muestra el video completo */
   background: #000;    /* fondo negro para rellenar */
 }
+.promo-banner {
+  position: fixed;       /* se queda fijo arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #28a745;   /* verde llamativo */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  z-index: 9999;         /* siempre encima */
+}

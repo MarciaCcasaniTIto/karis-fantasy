@@ -662,7 +662,7 @@
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 
-<div class="promo-bar" id="promoBar">
+<div class="promo-banner" id="promoBar">
   🎉 <strong>Promo día de semana:</strong> S/50 de descuento en show infantil, temático, competencia o Huntrix — válido de lunes a jueves.
   <button class="promo-close" id="promoClose" aria-label="Cerrar promoción">✕</button>
 </div>
@@ -1771,7 +1771,11 @@ document.querySelectorAll('.hover-video').forEach(video => {
   });
 });
 </script>
-
+<script>
+document.getElementById('promoClose').addEventListener('click', () => {
+  document.getElementById('promoBar').style.display = 'none';
+});
+</script>
 
 </body>
 </html>
