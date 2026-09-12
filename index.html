@@ -662,10 +662,56 @@
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 
-<div class="promo-banner" id="promoBar">
+<!-- Barra de Promoción -->
+<div class="promo-bar" id="promoBar">
   🎉 <strong>Promo día de semana:</strong> S/50 de descuento en show infantil, temático, competencia o Huntrix — válido de lunes a jueves.
   <button class="promo-close" id="promoClose" aria-label="Cerrar promoción">✕</button>
 </div>
+
+<style>
+.promo-bar {
+  position: fixed;       /* se queda fija arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #28a745;   /* verde llamativo */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 40px;
+  z-index: 9999;         /* siempre encima */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-bar strong {
+  margin-right: 5px;
+}
+
+.promo-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Empuja el contenido hacia abajo para que no quede tapado */
+body {
+  margin-top: 60px; /* ajusta según la altura de tu barra */
+}
+</style>
+
+<script>
+document.getElementById('promoClose').addEventListener('click', () => {
+  document.getElementById('promoBar').style.display = 'none';
+  document.body.style.marginTop = '0'; // quita el espacio si se cierra
+});
+</script>
+
 
 <header class="site">
   <div class="nav">
@@ -1771,11 +1817,7 @@ document.querySelectorAll('.hover-video').forEach(video => {
   });
 });
 </script>
-<script>
-document.getElementById('promoClose').addEventListener('click', () => {
-  document.getElementById('promoBar').style.display = 'none';
-});
-</script>
+
 
 </body>
 </html>
