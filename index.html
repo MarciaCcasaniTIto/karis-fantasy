@@ -1734,27 +1734,26 @@
     setTimeout(() => window.open(`https://wa.me/51941641526?text=${encodeURIComponent(msg)}`, '_blank'), 500);
   });
 </script>
-
 <style>
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  gap: 20px;
+  gap: 30px; /* espacio entre videos */
   justify-items: center;
   padding: 20px;
 }
 
 .hover-video {
-  width: 250px;   /* tamaño intermedio */
-  height: 160px;
-  border-radius: 10px;
+  width: 380px;   /* más grande y compacto */
+  height: 220px;  /* proporción vistosa */
+  border-radius: 12px;
   cursor: pointer;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .hover-video:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 </style>
 
@@ -1771,6 +1770,7 @@ document.querySelectorAll('.hover-video').forEach(video => {
   });
 });
 </script>
+
 
 </body>
 </html>
