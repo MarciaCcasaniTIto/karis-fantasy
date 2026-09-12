@@ -922,32 +922,21 @@
     <div class="video-row">
       <video class="hover-video" preload="metadata">
         <source src="videos/guerreraskpop.mp4" type="video/mp4">
-        Tu navegador no soporta video.
       </video>
-
       <video class="hover-video" preload="metadata">
         <source src="videos/descuento.mp4" type="video/mp4">
-        Tu navegador no soporta video.
       </video>
-
       <video class="hover-video" preload="metadata">
         <source src="videos/guerreraskpop2.mp4" type="video/mp4">
-        Tu navegador no soporta video.
       </video>
-
       <video class="hover-video" preload="metadata">
         <source src="videos/rene.mp4" type="video/mp4">
-        Tu navegador no soporta video.
       </video>
-
       <video class="hover-video" preload="metadata">
         <source src="videos/mundial.mp4" type="video/mp4">
-        Tu navegador no soporta video.
       </video>
-
       <video class="hover-video" preload="metadata">
         <source src="videos/fiesta.mp4" type="video/mp4">
-        Tu navegador no soporta video.
       </video>
     </div>
   </div>
@@ -1745,6 +1734,30 @@
     setTimeout(() => window.open(`https://wa.me/51941641526?text=${encodeURIComponent(msg)}`, '_blank'), 500);
   });
 </script>
+<style>
+.video-row {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.hover-video {
+  width: 150px;   /* tamaño más pequeño tipo foto */
+  height: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hover-video:hover {
+  transform: scale(1.1);
+}
+</style>
+
 <script>
 document.querySelectorAll('.hover-video').forEach(video => {
   video.addEventListener('mouseenter', () => {
